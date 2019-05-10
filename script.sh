@@ -6,9 +6,11 @@ sed 's/\([0-9][0-9]\)-\([0-9][0-9]\)-\([0-9][0-9][0-9][0-9]\)/\3-\2-\1/' out.13 
 sed 's/;;/;\\N;/g' out.14 > out.15 ##Completo los null \N
 sed 's/;N;/;\N;/g' out.15 > out.16 ##Completo los N por \N
 sed 's/;N/;\\N/g' out.16 > out.17 ##Completo los ;N por ;\N
-sed 's/\([0-9][0-9][0-9]\);\([0-9]\)/\1.2/' out.17 > out.18 #Rempazo ; seguido de un número por . y el mismo numero
+sed 's/\([0-9][0-9][0-9]\);\([0-9]\)/\1.\2/' out.17 > out.18 #Rempazo ; seguido de un número por . y el mismo numero
 sed 's/;/;\\N/3g' out.18 > out.19 #Remplaza el patron 3 de ; por ;\N 
 sed 's/\\N\\N/\\N/' out.19 > out.20 
 sed 's/\\N\([0-9][0-9][0-9]\)/\1/' out.20 > out.21 #Remplaza \N ### por ###
 sed 'y/abc/ABC/' out.21 > out.22 #Remplaza a por A
-sed -n '/\\N/!p' out.22 > out.23
+sed -n '/\\N/!p' out.22 > data1.csv
+cat out.22
+cat data1.csv
