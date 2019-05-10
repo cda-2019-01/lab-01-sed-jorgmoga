@@ -1,5 +1,5 @@
 # Escriba su código aquí
-sed 's/,\([0-9]\)/.\1/' out.10 > out.11 #Rempazo , seguido de un número por . y el mismo numero
+sed 's/,\([0-9]\)/.\1/' data.csv > out.11 #Rempazo , seguido de un número por . y el mismo numero
 
 sed 's/\//-/g' out.11 > out.12 #Remplazo / por -  Cascarita: para identificar el / hay que poner \/
 
@@ -23,3 +23,4 @@ sed 's/\\N\\N/\\N/' out.19 > out.20
 sed 's/\\N\([0-9][0-9][0-9]\)/\1/' out.20 > out.21 #Remplaza \N ### por ###
 
 sed 'y/abc/ABC/' out.21 > out.22 #Remplaza a por A
+
