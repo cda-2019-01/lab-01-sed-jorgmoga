@@ -1,5 +1,4 @@
 # Escriba su código aquí
-# Escriba su código aquí
 sed 's/,\([0-9]\)/.\1/' data.csv > out.11 #Rempazo , seguido de un número por . y el mismo numero
 sed 's/\//-/g' out.11 > out.12 #Remplazo / por -  Cascarita: para identificar el / hay que poner \/
 sed 's/-\([0-9][0-9]\);/-20\1;/' out.12 > out.13 #cambio el formato de YY a YYYY
