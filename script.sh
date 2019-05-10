@@ -11,3 +11,4 @@ sed 's/;/;\\N/3g' out.18 > out.19 #Remplaza el patron 3 de ; por ;\N
 sed 's/\\N\\N/\\N/' out.19 > out.20 
 sed 's/\\N\([0-9][0-9][0-9]\)/\1/' out.20 > out.21 #Remplaza \N ### por ###
 sed 'y/abc/ABC/' out.21 > out.22 #Remplaza a por A
+sed -n '/\\N/!p' out.22 > out.23
