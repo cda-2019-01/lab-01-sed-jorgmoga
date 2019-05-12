@@ -12,4 +12,4 @@ sed 'y/abc/ABC/' out.19 > out.22 #Remplaza a por A
 sed '/\N/d' out.22 > data1.csv # Elimino las lineas nulas
 cat out.22 # muestro los datos previos a la depuración
 rm out.* # Borro los out
-cat data1.csv # Muestro los datos finales
+#cat data1.csv # Muestro los datos finales
