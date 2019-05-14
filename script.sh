@@ -9,7 +9,7 @@ sed 's/;N/;\\N/g' out.16 > out.17 ##Completo los ;N por ;\N
 sed 's/\([0-9][0-9][0-9]\);\([0-9]\)/\1.\2/' out.17 > out.18 #Rempazo ; seguido de un número por . y el mismo numero
 sed 's/;\r/;\\N/g' out.18 > out.19 #agrego el null al final
 sed 'y/abc/ABC/' out.19 > out.22 #Remplaza a por A
-sed 's/;/,/g' out.22 > out.23 ##Completo los ;N por ;\N
+sed 's/;/,/g' out.22 > out.23 ##Remplazo los ; por ,
 sed '/\N/d' out.23 > data1.csv # Elimino las lineas nulas
 cat out.23 # muestro los datos previos a la depuración
 rm out.* # Borro los out
